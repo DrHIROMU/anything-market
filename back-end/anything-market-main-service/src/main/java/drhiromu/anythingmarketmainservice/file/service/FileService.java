@@ -1,5 +1,7 @@
 package drhiromu.anythingmarketmainservice.file.service;
 
+import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.io.FilenameUtils;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
 import org.springframework.stereotype.Service;
@@ -11,31 +13,62 @@ import java.net.MalformedURLException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Arrays;
+import java.util.List;
 import java.util.stream.Stream;
 
+@Slf4j
 @Service
 public class FileService {
-    private final Path root = Paths.get("uploads");
-    
-    public void init() {
+    private final Path filePath = Paths.get("uploads/files/");
+    private final Path imagePath = Paths.get("uploads/images/");
+
+    private static final List<String> imageExtentions = Arrays.asList("png", "jpg", "jpeg", "gif");
+
+    public void init(Path path) throws Exception{
         try {
-            Files.createDirectory(root);
+            Files.createDirectories(path);
         } catch (IOException e) {
-            throw new RuntimeException("Could not initialize folder for upload!");
+            throw e;
         }
     }
     
     public void save(MultipartFile file) {
+        String extension = FilenameUtils.getExtension(file.getOriginalFilename());
+        if(imageExtentions.contains(extension)){
+            saveImage(file);
+        }else{
+            saveFile(file);
+        }
+    }
+
+    public void saveFile(MultipartFile file) {
         try {
-            Files.copy(file.getInputStream(), this.root.resolve(file.getOriginalFilename()));
+            if(!Files.exists(filePath)){
+                init(filePath);
+            }
+            Files.copy(file.getInputStream(), this.filePath.resolve(file.getOriginalFilename()));
         } catch (Exception e) {
+            log.error("Error", e);
             throw new RuntimeException("Could not store the file. Error: " + e.getMessage());
+        }
+    }
+
+    public void saveImage(MultipartFile file) {
+        try {
+            if(!Files.exists(imagePath)){
+                init(imagePath);
+            }
+            Files.copy(file.getInputStream(), this.imagePath.resolve(file.getOriginalFilename()));
+        } catch (Exception e) {
+            log.error("Error", e);
+            throw new RuntimeException("Could not store the image. Error: " + e.getMessage());
         }
     }
     
     public Resource load(String filename) {
         try {
-            Path file = root.resolve(filename);
+            Path file = filePath.resolve(filename);
             Resource resource = new UrlResource(file.toUri());
             if (resource.exists() || resource.isReadable()) {
                 return resource;
@@ -48,12 +81,12 @@ public class FileService {
     }
     
     public void deleteAll() {
-        FileSystemUtils.deleteRecursively(root.toFile());
+        FileSystemUtils.deleteRecursively(filePath.toFile());
     }
     
     public Stream<Path> loadAll() {
         try {
-            return Files.walk(this.root, 1).filter(path -> !path.equals(this.root)).map(this.root::relativize);
+            return Files.walk(this.filePath, 1).filter(path -> !path.equals(this.filePath)).map(this.filePath::relativize);
         } catch (IOException e) {
             throw new RuntimeException("Could not load the files!");
         }
