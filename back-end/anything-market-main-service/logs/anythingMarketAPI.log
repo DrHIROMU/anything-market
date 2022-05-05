@@ -1,31 +1,424 @@
-2022-04-27 11:44:49.262 [anythingMarketAPI-main] INFO  d.a.AnythingMarketMainServiceApplication - Starting AnythingMarketMainServiceApplication using Java 11 on NB100608 with PID 17648 (D:\workspace\anything-market\back-end\anything-market-main-service\target\classes started by Tommy12.Lin in D:\workspace\anything-market\back-end\anything-market-main-service)
-2022-04-27 11:44:49.265 [anythingMarketAPI-main] INFO  d.a.AnythingMarketMainServiceApplication - No active profile set, falling back to 1 default profile: "default"
-2022-04-27 11:44:50.060 [anythingMarketAPI-main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-04-27 11:44:50.125 [anythingMarketAPI-main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 51 ms. Found 1 JPA repository interfaces.
-2022-04-27 11:44:51.249 [anythingMarketAPI-main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-2022-04-27 11:44:51.260 [anythingMarketAPI-main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2022-04-27 11:44:51.260 [anythingMarketAPI-main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2022-04-27 11:44:51.261 [anythingMarketAPI-main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-04-27 11:44:51.424 [anythingMarketAPI-main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2022-04-27 11:44:51.424 [anythingMarketAPI-main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2107 ms
-2022-04-27 11:44:51.745 [anythingMarketAPI-main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-04-27 11:44:51.820 [anythingMarketAPI-main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.5.Final
-2022-04-27 11:44:52.000 [anythingMarketAPI-main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-04-27 11:44:52.105 [anythingMarketAPI-main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2022-04-27 11:44:52.194 [anythingMarketAPI-main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2022-04-27 11:44:52.226 [anythingMarketAPI-main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
-2022-04-27 11:44:52.969 [anythingMarketAPI-main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-04-27 11:44:52.978 [anythingMarketAPI-main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-04-27 11:44:53.026 [anythingMarketAPI-main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-04-27 11:44:53.443 [anythingMarketAPI-main] INFO  d.anythingmarketmainservice.config.ExecutorConfig - ThreadPoolTaskExecutor Properties, CorePoolSize: 5, MaxPoolSize: 10, QueueCapacity: 10
-2022-04-27 11:44:53.597 [anythingMarketAPI-main] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+2022-05-05 09:43:41.535 [anythingMarketAPI-main] INFO  d.a.AnythingMarketMainServiceApplication - Starting AnythingMarketMainServiceApplication using Java 11 on NB100608 with PID 12108 (D:\workspace\anything-market\back-end\anything-market-main-service\target\classes started by Tommy12.Lin in D:\workspace\anything-market\back-end\anything-market-main-service)
+2022-05-05 09:43:41.554 [anythingMarketAPI-main] INFO  d.a.AnythingMarketMainServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2022-05-05 09:43:42.553 [anythingMarketAPI-main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-05 09:43:42.640 [anythingMarketAPI-main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 75 ms. Found 1 JPA repository interfaces.
+2022-05-05 09:43:44.347 [anythingMarketAPI-main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-05-05 09:43:44.358 [anythingMarketAPI-main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2022-05-05 09:43:44.358 [anythingMarketAPI-main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-05-05 09:43:44.358 [anythingMarketAPI-main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-05-05 09:43:44.500 [anythingMarketAPI-main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-05-05 09:43:44.500 [anythingMarketAPI-main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2869 ms
+2022-05-05 09:43:44.788 [anythingMarketAPI-main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-05 09:43:44.871 [anythingMarketAPI-main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-05-05 09:43:45.069 [anythingMarketAPI-main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-05 09:43:45.175 [anythingMarketAPI-main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-05-05 09:43:45.275 [anythingMarketAPI-main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-05-05 09:43:45.318 [anythingMarketAPI-main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+2022-05-05 09:43:46.131 [anythingMarketAPI-main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-05 09:43:46.139 [anythingMarketAPI-main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-05 09:43:46.196 [anythingMarketAPI-main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-05 09:43:46.591 [anythingMarketAPI-main] INFO  d.anythingmarketmainservice.config.ExecutorConfig - ThreadPoolTaskExecutor Properties, CorePoolSize: 5, MaxPoolSize: 10, QueueCapacity: 10
+2022-05-05 09:43:46.741 [anythingMarketAPI-main] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
 
-Using generated security password: afbf1c7c-74ed-42eb-b0be-48133fa11edf
+Using generated security password: 4b53d82d-04aa-4471-97b1-6fba548da816
 
-2022-04-27 11:44:53.847 [anythingMarketAPI-main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will not secure any request
-2022-04-27 11:44:54.031 [anythingMarketAPI-main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2022-04-27 11:44:54.060 [anythingMarketAPI-main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-2022-04-27 11:44:54.073 [anythingMarketAPI-main] INFO  d.a.AnythingMarketMainServiceApplication - Started AnythingMarketMainServiceApplication in 5.38 seconds (JVM running for 6.048)
-2022-04-27 13:30:55.750 [anythingMarketAPI-SpringApplicationShutdownHook] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-04-27 13:30:55.765 [anythingMarketAPI-SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2022-04-27 13:30:55.771 [anythingMarketAPI-SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-05-05 09:43:47.036 [anythingMarketAPI-main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will not secure any request
+2022-05-05 09:43:47.243 [anythingMarketAPI-main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2022-05-05 09:43:47.279 [anythingMarketAPI-main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-05 09:43:47.293 [anythingMarketAPI-main] INFO  d.a.AnythingMarketMainServiceApplication - Started AnythingMarketMainServiceApplication in 6.45 seconds (JVM running for 7.726)
+2022-05-05 09:45:36.992 [anythingMarketAPI-SpringApplicationShutdownHook] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-05 09:45:36.994 [anythingMarketAPI-SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-05-05 09:45:36.999 [anythingMarketAPI-SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-05-05 09:45:45.640 [anythingMarketAPI-main] INFO  d.a.AnythingMarketMainServiceApplication - Starting AnythingMarketMainServiceApplication using Java 11 on NB100608 with PID 13236 (D:\workspace\anything-market\back-end\anything-market-main-service\target\classes started by Tommy12.Lin in D:\workspace\anything-market\back-end\anything-market-main-service)
+2022-05-05 09:45:45.642 [anythingMarketAPI-main] INFO  d.a.AnythingMarketMainServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2022-05-05 09:45:46.596 [anythingMarketAPI-main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-05 09:45:46.677 [anythingMarketAPI-main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 68 ms. Found 1 JPA repository interfaces.
+2022-05-05 09:45:48.029 [anythingMarketAPI-main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-05-05 09:45:48.063 [anythingMarketAPI-main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2022-05-05 09:45:48.064 [anythingMarketAPI-main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-05-05 09:45:48.065 [anythingMarketAPI-main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-05-05 09:45:48.287 [anythingMarketAPI-main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-05-05 09:45:48.288 [anythingMarketAPI-main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2588 ms
+2022-05-05 09:45:48.584 [anythingMarketAPI-main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-05 09:45:48.785 [anythingMarketAPI-main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-05-05 09:45:48.979 [anythingMarketAPI-main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-05 09:45:49.090 [anythingMarketAPI-main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-05-05 09:45:49.177 [anythingMarketAPI-main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-05-05 09:45:49.224 [anythingMarketAPI-main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+2022-05-05 09:45:49.872 [anythingMarketAPI-main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-05 09:45:49.880 [anythingMarketAPI-main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-05 09:45:49.944 [anythingMarketAPI-main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-05 09:45:50.270 [anythingMarketAPI-main] INFO  d.anythingmarketmainservice.config.ExecutorConfig - ThreadPoolTaskExecutor Properties, CorePoolSize: 5, MaxPoolSize: 10, QueueCapacity: 10
+2022-05-05 09:45:50.394 [anythingMarketAPI-main] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 821b368b-00d0-439d-b260-305a875e984a
+
+2022-05-05 09:45:50.655 [anythingMarketAPI-main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will not secure any request
+2022-05-05 09:45:50.828 [anythingMarketAPI-main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2022-05-05 09:45:50.861 [anythingMarketAPI-main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-05 09:45:50.873 [anythingMarketAPI-main] INFO  d.a.AnythingMarketMainServiceApplication - Started AnythingMarketMainServiceApplication in 6.074 seconds (JVM running for 6.857)
+2022-05-05 09:47:08.562 [anythingMarketAPI-SpringApplicationShutdownHook] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-05 09:47:08.564 [anythingMarketAPI-SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-05-05 09:47:08.571 [anythingMarketAPI-SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-05-05 09:47:16.374 [anythingMarketAPI-main] INFO  d.a.AnythingMarketMainServiceApplication - Starting AnythingMarketMainServiceApplication using Java 11 on NB100608 with PID 18460 (D:\workspace\anything-market\back-end\anything-market-main-service\target\classes started by Tommy12.Lin in D:\workspace\anything-market\back-end\anything-market-main-service)
+2022-05-05 09:47:16.378 [anythingMarketAPI-main] INFO  d.a.AnythingMarketMainServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2022-05-05 09:47:17.423 [anythingMarketAPI-main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-05 09:47:17.515 [anythingMarketAPI-main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 80 ms. Found 1 JPA repository interfaces.
+2022-05-05 09:47:19.047 [anythingMarketAPI-main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-05-05 09:47:19.057 [anythingMarketAPI-main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2022-05-05 09:47:19.057 [anythingMarketAPI-main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-05-05 09:47:19.057 [anythingMarketAPI-main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-05-05 09:47:19.270 [anythingMarketAPI-main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-05-05 09:47:19.270 [anythingMarketAPI-main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2799 ms
+2022-05-05 09:47:19.511 [anythingMarketAPI-main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-05 09:47:19.579 [anythingMarketAPI-main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-05-05 09:47:19.759 [anythingMarketAPI-main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-05 09:47:19.861 [anythingMarketAPI-main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-05-05 09:47:19.941 [anythingMarketAPI-main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-05-05 09:47:19.972 [anythingMarketAPI-main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+2022-05-05 09:47:20.660 [anythingMarketAPI-main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-05 09:47:20.670 [anythingMarketAPI-main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-05 09:47:20.731 [anythingMarketAPI-main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-05 09:47:21.046 [anythingMarketAPI-main] INFO  d.anythingmarketmainservice.config.ExecutorConfig - ThreadPoolTaskExecutor Properties, CorePoolSize: 5, MaxPoolSize: 10, QueueCapacity: 10
+2022-05-05 09:47:21.176 [anythingMarketAPI-main] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 149e2367-45ad-4252-92f2-d6c3dec59ae9
+
+2022-05-05 09:47:21.434 [anythingMarketAPI-main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will not secure any request
+2022-05-05 09:47:21.620 [anythingMarketAPI-main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2022-05-05 09:47:21.652 [anythingMarketAPI-main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-05 09:47:21.665 [anythingMarketAPI-main] INFO  d.a.AnythingMarketMainServiceApplication - Started AnythingMarketMainServiceApplication in 6.197 seconds (JVM running for 6.876)
+2022-05-05 09:47:39.596 [anythingMarketAPI-main] INFO  d.a.AnythingMarketMainServiceApplication - 
+----------------------------------------------------------------------
+	Application 'AnythingMarketMainServiceApplication' is running!
+----------------------------------------------------------------------
+2022-05-05 09:48:25.172 [anythingMarketAPI-SpringApplicationShutdownHook] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-05 09:48:25.174 [anythingMarketAPI-SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-05-05 09:48:25.180 [anythingMarketAPI-SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-05-05 09:48:32.897 [anythingMarketAPI-main] INFO  d.a.AnythingMarketMainServiceApplication - Starting AnythingMarketMainServiceApplication using Java 11 on NB100608 with PID 18028 (D:\workspace\anything-market\back-end\anything-market-main-service\target\classes started by Tommy12.Lin in D:\workspace\anything-market\back-end\anything-market-main-service)
+2022-05-05 09:48:32.900 [anythingMarketAPI-main] INFO  d.a.AnythingMarketMainServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2022-05-05 09:48:33.791 [anythingMarketAPI-main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-05 09:48:33.874 [anythingMarketAPI-main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 71 ms. Found 1 JPA repository interfaces.
+2022-05-05 09:48:35.015 [anythingMarketAPI-main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-05-05 09:48:35.025 [anythingMarketAPI-main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2022-05-05 09:48:35.025 [anythingMarketAPI-main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-05-05 09:48:35.025 [anythingMarketAPI-main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-05-05 09:48:35.163 [anythingMarketAPI-main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-05-05 09:48:35.163 [anythingMarketAPI-main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2214 ms
+2022-05-05 09:48:35.442 [anythingMarketAPI-main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-05 09:48:35.512 [anythingMarketAPI-main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-05-05 09:48:35.712 [anythingMarketAPI-main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-05 09:48:35.821 [anythingMarketAPI-main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-05-05 09:48:35.912 [anythingMarketAPI-main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-05-05 09:48:35.953 [anythingMarketAPI-main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+2022-05-05 09:48:36.600 [anythingMarketAPI-main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-05 09:48:36.607 [anythingMarketAPI-main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-05 09:48:36.663 [anythingMarketAPI-main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-05 09:48:36.973 [anythingMarketAPI-main] INFO  d.anythingmarketmainservice.config.ExecutorConfig - ThreadPoolTaskExecutor Properties, CorePoolSize: 5, MaxPoolSize: 10, QueueCapacity: 10
+2022-05-05 09:48:37.092 [anythingMarketAPI-main] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 3ef78075-01b7-45ae-8d6c-222dea9f5b6d
+
+2022-05-05 09:48:37.330 [anythingMarketAPI-main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will not secure any request
+2022-05-05 09:48:37.505 [anythingMarketAPI-main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2022-05-05 09:48:37.555 [anythingMarketAPI-main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-05 09:48:37.567 [anythingMarketAPI-main] INFO  d.a.AnythingMarketMainServiceApplication - Started AnythingMarketMainServiceApplication in 5.397 seconds (JVM running for 6.156)
+2022-05-05 09:48:37.570 [anythingMarketAPI-main] ERROR d.a.AnythingMarketMainServiceApplication - 
+----------------------------------------------------------------------
+	Application 'AnythingMarketMainServiceApplication' is running!
+----------------------------------------------------------------------
+2022-05-05 09:53:17.667 [anythingMarketAPI-SpringApplicationShutdownHook] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-05 09:53:17.670 [anythingMarketAPI-SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-05-05 09:53:17.674 [anythingMarketAPI-SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-05-05 09:54:22.796 [anythingMarketAPI-main] INFO  d.a.AnythingMarketMainServiceApplication - Starting AnythingMarketMainServiceApplication using Java 11 on NB100608 with PID 19888 (D:\workspace\anything-market\back-end\anything-market-main-service\target\classes started by Tommy12.Lin in D:\workspace\anything-market\back-end\anything-market-main-service)
+2022-05-05 09:54:22.799 [anythingMarketAPI-main] INFO  d.a.AnythingMarketMainServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2022-05-05 09:54:23.561 [anythingMarketAPI-main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-05 09:54:23.632 [anythingMarketAPI-main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 58 ms. Found 1 JPA repository interfaces.
+2022-05-05 09:54:24.854 [anythingMarketAPI-main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-05-05 09:54:24.863 [anythingMarketAPI-main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2022-05-05 09:54:24.864 [anythingMarketAPI-main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-05-05 09:54:24.864 [anythingMarketAPI-main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-05-05 09:54:25.016 [anythingMarketAPI-main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-05-05 09:54:25.016 [anythingMarketAPI-main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2170 ms
+2022-05-05 09:54:25.232 [anythingMarketAPI-main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-05 09:54:25.289 [anythingMarketAPI-main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-05-05 09:54:25.484 [anythingMarketAPI-main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-05 09:54:25.588 [anythingMarketAPI-main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-05-05 09:54:25.659 [anythingMarketAPI-main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-05-05 09:54:25.692 [anythingMarketAPI-main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+2022-05-05 09:54:26.365 [anythingMarketAPI-main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-05 09:54:26.374 [anythingMarketAPI-main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-05 09:54:26.425 [anythingMarketAPI-main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-05 09:54:26.821 [anythingMarketAPI-main] INFO  d.anythingmarketmainservice.config.ExecutorConfig - ThreadPoolTaskExecutor Properties, CorePoolSize: 5, MaxPoolSize: 10, QueueCapacity: 10
+2022-05-05 09:54:26.970 [anythingMarketAPI-main] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 403ad828-6b49-4010-949b-f94ad7e8b090
+
+2022-05-05 09:54:27.333 [anythingMarketAPI-main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will not secure any request
+2022-05-05 09:54:27.579 [anythingMarketAPI-main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2022-05-05 09:54:27.615 [anythingMarketAPI-main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-05 09:54:27.628 [anythingMarketAPI-main] INFO  d.a.AnythingMarketMainServiceApplication - Started AnythingMarketMainServiceApplication in 5.447 seconds (JVM running for 6.16)
+2022-05-05 09:54:27.632 [anythingMarketAPI-main] ERROR d.a.AnythingMarketMainServiceApplication - 
+----------------------------------------------------------------------
+	Application 'AnythingMarketMainServiceApplication' is running!
+----------------------------------------------------------------------
+2022-05-05 10:04:40.100 [anythingMarketAPI-SpringApplicationShutdownHook] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-05 10:04:40.102 [anythingMarketAPI-SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-05-05 10:04:40.107 [anythingMarketAPI-SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-05-05 10:04:46.039 [anythingMarketAPI-main] INFO  d.a.AnythingMarketMainServiceApplication - Starting AnythingMarketMainServiceApplication using Java 11 on NB100608 with PID 18888 (D:\workspace\anything-market\back-end\anything-market-main-service\target\classes started by Tommy12.Lin in D:\workspace\anything-market\back-end\anything-market-main-service)
+2022-05-05 10:04:46.042 [anythingMarketAPI-main] INFO  d.a.AnythingMarketMainServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2022-05-05 10:04:46.800 [anythingMarketAPI-main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-05 10:04:46.850 [anythingMarketAPI-main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 42 ms. Found 1 JPA repository interfaces.
+2022-05-05 10:04:47.985 [anythingMarketAPI-main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http)
+2022-05-05 10:04:47.996 [anythingMarketAPI-main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+2022-05-05 10:04:47.997 [anythingMarketAPI-main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-05-05 10:04:47.997 [anythingMarketAPI-main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-05-05 10:04:48.135 [anythingMarketAPI-main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-05-05 10:04:48.135 [anythingMarketAPI-main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2042 ms
+2022-05-05 10:04:48.353 [anythingMarketAPI-main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-05 10:04:48.402 [anythingMarketAPI-main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-05-05 10:04:48.553 [anythingMarketAPI-main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-05 10:04:48.649 [anythingMarketAPI-main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-05-05 10:04:48.710 [anythingMarketAPI-main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-05-05 10:04:48.737 [anythingMarketAPI-main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+2022-05-05 10:04:49.304 [anythingMarketAPI-main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-05 10:04:49.312 [anythingMarketAPI-main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-05 10:04:49.323 [anythingMarketAPI-main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'executorConfig': Unsatisfied dependency expressed through field 'corePoolSize'; nested exception is org.springframework.beans.TypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; nested exception is java.lang.NumberFormatException: For input string: ""
+2022-05-05 10:04:49.323 [anythingMarketAPI-main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-05 10:04:49.327 [anythingMarketAPI-main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-05-05 10:04:49.334 [anythingMarketAPI-main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-05-05 10:04:49.337 [anythingMarketAPI-main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2022-05-05 10:04:49.349 [anythingMarketAPI-main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-05-05 10:04:49.367 [anythingMarketAPI-main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'executorConfig': Unsatisfied dependency expressed through field 'corePoolSize'; nested exception is org.springframework.beans.TypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; nested exception is java.lang.NumberFormatException: For input string: ""
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at drhiromu.anythingmarketmainservice.AnythingMarketMainServiceApplication.main(AnythingMarketMainServiceApplication.java:14)
+Caused by: org.springframework.beans.TypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; nested exception is java.lang.NumberFormatException: For input string: ""
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:79)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1337)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
+	... 20 common frames omitted
+Caused by: java.lang.NumberFormatException: For input string: ""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:662)
+	at java.base/java.lang.Integer.valueOf(Integer.java:983)
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:211)
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115)
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:429)
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:402)
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:155)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:73)
+	... 23 common frames omitted
+2022-05-05 10:05:37.344 [anythingMarketAPI-main] INFO  d.a.AnythingMarketMainServiceApplication - Starting AnythingMarketMainServiceApplication using Java 11 on NB100608 with PID 18700 (D:\workspace\anything-market\back-end\anything-market-main-service\target\classes started by Tommy12.Lin in D:\workspace\anything-market\back-end\anything-market-main-service)
+2022-05-05 10:05:37.347 [anythingMarketAPI-main] INFO  d.a.AnythingMarketMainServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2022-05-05 10:05:38.108 [anythingMarketAPI-main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-05 10:05:38.165 [anythingMarketAPI-main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 49 ms. Found 1 JPA repository interfaces.
+2022-05-05 10:05:39.304 [anythingMarketAPI-main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http)
+2022-05-05 10:05:39.315 [anythingMarketAPI-main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+2022-05-05 10:05:39.315 [anythingMarketAPI-main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-05-05 10:05:39.315 [anythingMarketAPI-main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-05-05 10:05:39.451 [anythingMarketAPI-main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-05-05 10:05:39.451 [anythingMarketAPI-main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2058 ms
+2022-05-05 10:05:39.690 [anythingMarketAPI-main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-05 10:05:39.751 [anythingMarketAPI-main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-05-05 10:05:39.920 [anythingMarketAPI-main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-05 10:05:40.034 [anythingMarketAPI-main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-05-05 10:05:40.113 [anythingMarketAPI-main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-05-05 10:05:40.157 [anythingMarketAPI-main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+2022-05-05 10:05:40.790 [anythingMarketAPI-main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-05 10:05:40.799 [anythingMarketAPI-main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-05 10:05:40.861 [anythingMarketAPI-main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-05 10:05:41.227 [anythingMarketAPI-main] INFO  d.anythingmarketmainservice.config.ExecutorConfig - ThreadPoolTaskExecutor Properties, CorePoolSize: 5, MaxPoolSize: 10, QueueCapacity: 10
+2022-05-05 10:05:41.312 [anythingMarketAPI-main] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: a1e36388-6115-4fcb-b3f0-fc5730ddc6bd
+
+2022-05-05 10:05:41.629 [anythingMarketAPI-main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will not secure any request
+2022-05-05 10:05:41.833 [anythingMarketAPI-main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+2022-05-05 10:05:41.865 [anythingMarketAPI-main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (http) with context path ''
+2022-05-05 10:05:41.879 [anythingMarketAPI-main] INFO  d.a.AnythingMarketMainServiceApplication - Started AnythingMarketMainServiceApplication in 5.1 seconds (JVM running for 5.817)
+2022-05-05 10:05:41.884 [anythingMarketAPI-main] ERROR d.a.AnythingMarketMainServiceApplication - 
+----------------------------------------------------------------------
+	Application 'AnythingMarketMainServiceApplication' is running!
+----------------------------------------------------------------------
+2022-05-05 10:06:36.018 [anythingMarketAPI-http-nio-8088-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-05 10:06:36.019 [anythingMarketAPI-http-nio-8088-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-05-05 10:06:36.020 [anythingMarketAPI-http-nio-8088-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-05-05 10:10:26.826 [anythingMarketAPI-SpringApplicationShutdownHook] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-05 10:10:26.829 [anythingMarketAPI-SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-05-05 10:10:26.835 [anythingMarketAPI-SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-05-05 10:10:41.819 [anythingMarketAPI-main] INFO  d.a.AnythingMarketMainServiceApplication - Starting AnythingMarketMainServiceApplication using Java 11 on NB100608 with PID 19568 (D:\workspace\anything-market\back-end\anything-market-main-service\target\classes started by Tommy12.Lin in D:\workspace\anything-market\back-end\anything-market-main-service)
+2022-05-05 10:10:41.821 [anythingMarketAPI-main] INFO  d.a.AnythingMarketMainServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2022-05-05 10:10:42.863 [anythingMarketAPI-main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-05 10:10:42.932 [anythingMarketAPI-main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 59 ms. Found 1 JPA repository interfaces.
+2022-05-05 10:10:44.449 [anythingMarketAPI-main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http)
+2022-05-05 10:10:44.466 [anythingMarketAPI-main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+2022-05-05 10:10:44.467 [anythingMarketAPI-main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-05-05 10:10:44.467 [anythingMarketAPI-main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-05-05 10:10:44.663 [anythingMarketAPI-main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-05-05 10:10:44.663 [anythingMarketAPI-main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2776 ms
+2022-05-05 10:10:44.975 [anythingMarketAPI-main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-05 10:10:45.041 [anythingMarketAPI-main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-05-05 10:10:45.222 [anythingMarketAPI-main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-05 10:10:45.381 [anythingMarketAPI-main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-05-05 10:10:45.504 [anythingMarketAPI-main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-05-05 10:10:45.549 [anythingMarketAPI-main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+2022-05-05 10:10:46.352 [anythingMarketAPI-main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-05 10:10:46.362 [anythingMarketAPI-main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-05 10:10:46.434 [anythingMarketAPI-main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-05 10:10:46.884 [anythingMarketAPI-main] INFO  d.anythingmarketmainservice.config.ExecutorConfig - ThreadPoolTaskExecutor Properties, CorePoolSize: 5, MaxPoolSize: 10, QueueCapacity: 10
+2022-05-05 10:10:46.977 [anythingMarketAPI-main] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: b4a243da-922d-463c-8700-87551bf9a9ac
+
+2022-05-05 10:10:47.292 [anythingMarketAPI-main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will not secure any request
+2022-05-05 10:10:47.502 [anythingMarketAPI-main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+2022-05-05 10:10:47.536 [anythingMarketAPI-main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (http) with context path ''
+2022-05-05 10:10:47.550 [anythingMarketAPI-main] INFO  d.a.AnythingMarketMainServiceApplication - Started AnythingMarketMainServiceApplication in 6.524 seconds (JVM running for 7.582)
+2022-05-05 10:10:47.554 [anythingMarketAPI-main] ERROR d.a.AnythingMarketMainServiceApplication - 
+----------------------------------------------------------------------
+	Application 'AnythingMarketMainServiceApplication' is running!
+----------------------------------------------------------------------
+2022-05-05 10:10:51.245 [anythingMarketAPI-http-nio-8088-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-05 10:10:51.246 [anythingMarketAPI-http-nio-8088-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-05-05 10:10:51.248 [anythingMarketAPI-http-nio-8088-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2022-05-05 10:10:51.300 [anythingMarketAPI-http-nio-8088-exec-2] INFO  d.a.market.controller.PurchaseController - test
+2022-05-05 10:11:47.514 [anythingMarketAPI-SpringApplicationShutdownHook] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-05 10:11:47.516 [anythingMarketAPI-SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-05-05 10:11:47.524 [anythingMarketAPI-SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-05-05 10:13:43.455 [anythingMarketAPI-main] INFO  d.a.AnythingMarketMainServiceApplication - Starting AnythingMarketMainServiceApplication using Java 11 on NB100608 with PID 6208 (D:\workspace\anything-market\back-end\anything-market-main-service\target\classes started by Tommy12.Lin in D:\workspace\anything-market\back-end\anything-market-main-service)
+2022-05-05 10:13:43.459 [anythingMarketAPI-main] INFO  d.a.AnythingMarketMainServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2022-05-05 10:13:44.670 [anythingMarketAPI-main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-05 10:13:44.746 [anythingMarketAPI-main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 65 ms. Found 1 JPA repository interfaces.
+2022-05-05 10:13:46.475 [anythingMarketAPI-main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http)
+2022-05-05 10:13:46.488 [anythingMarketAPI-main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+2022-05-05 10:13:46.489 [anythingMarketAPI-main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-05-05 10:13:46.489 [anythingMarketAPI-main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-05-05 10:13:46.678 [anythingMarketAPI-main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-05-05 10:13:46.679 [anythingMarketAPI-main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3137 ms
+2022-05-05 10:13:47.102 [anythingMarketAPI-main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-05 10:13:47.194 [anythingMarketAPI-main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-05-05 10:13:47.457 [anythingMarketAPI-main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-05 10:13:47.642 [anythingMarketAPI-main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-05-05 10:13:47.761 [anythingMarketAPI-main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-05-05 10:13:47.814 [anythingMarketAPI-main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+2022-05-05 10:13:48.694 [anythingMarketAPI-main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-05 10:13:48.704 [anythingMarketAPI-main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-05 10:13:48.782 [anythingMarketAPI-main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-05 10:13:49.270 [anythingMarketAPI-main] INFO  d.anythingmarketmainservice.config.ExecutorConfig - ThreadPoolTaskExecutor Properties, CorePoolSize: 5, MaxPoolSize: 10, QueueCapacity: 10
+2022-05-05 10:13:49.384 [anythingMarketAPI-main] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 2fea8046-2d99-4b45-85e8-ec3744e83a18
+
+2022-05-05 10:13:49.737 [anythingMarketAPI-main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will not secure any request
+2022-05-05 10:13:49.990 [anythingMarketAPI-main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+2022-05-05 10:13:50.031 [anythingMarketAPI-main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (http) with context path ''
+2022-05-05 10:13:50.046 [anythingMarketAPI-main] INFO  d.a.AnythingMarketMainServiceApplication - Started AnythingMarketMainServiceApplication in 7.532 seconds (JVM running for 8.483)
+2022-05-05 10:13:50.050 [anythingMarketAPI-main] ERROR d.a.AnythingMarketMainServiceApplication - 
+----------------------------------------------------------------------
+	Application 'AnythingMarketMainServiceApplication' is running!
+----------------------------------------------------------------------
+2022-05-05 10:14:05.393 [anythingMarketAPI-http-nio-8088-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-05 10:14:05.393 [anythingMarketAPI-http-nio-8088-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-05-05 10:14:05.396 [anythingMarketAPI-http-nio-8088-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2022-05-05 10:14:11.251 [anythingMarketAPI-http-nio-8088-exec-3] INFO  d.a.market.controller.PurchaseController - test
+2022-05-05 10:14:37.029 [anythingMarketAPI-SpringApplicationShutdownHook] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-05 10:14:37.032 [anythingMarketAPI-SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-05-05 10:14:37.039 [anythingMarketAPI-SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-05-05 10:14:49.071 [anythingMarketAPI-main] INFO  d.a.AnythingMarketMainServiceApplication - Starting AnythingMarketMainServiceApplication using Java 11 on NB100608 with PID 5288 (D:\workspace\anything-market\back-end\anything-market-main-service\target\classes started by Tommy12.Lin in D:\workspace\anything-market\back-end\anything-market-main-service)
+2022-05-05 10:14:49.077 [anythingMarketAPI-main] INFO  d.a.AnythingMarketMainServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2022-05-05 10:14:50.459 [anythingMarketAPI-main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-05 10:14:50.555 [anythingMarketAPI-main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 80 ms. Found 1 JPA repository interfaces.
+2022-05-05 10:14:52.531 [anythingMarketAPI-main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http)
+2022-05-05 10:14:52.546 [anythingMarketAPI-main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+2022-05-05 10:14:52.547 [anythingMarketAPI-main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-05-05 10:14:52.548 [anythingMarketAPI-main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-05-05 10:14:52.783 [anythingMarketAPI-main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-05-05 10:14:52.784 [anythingMarketAPI-main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3603 ms
+2022-05-05 10:14:53.163 [anythingMarketAPI-main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-05 10:14:53.255 [anythingMarketAPI-main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-05-05 10:14:53.509 [anythingMarketAPI-main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-05 10:14:53.665 [anythingMarketAPI-main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-05-05 10:14:53.790 [anythingMarketAPI-main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-05-05 10:14:53.843 [anythingMarketAPI-main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+2022-05-05 10:14:54.873 [anythingMarketAPI-main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-05 10:14:54.889 [anythingMarketAPI-main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-05 10:14:55.014 [anythingMarketAPI-main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-05 10:14:55.624 [anythingMarketAPI-main] INFO  d.anythingmarketmainservice.config.ExecutorConfig - ThreadPoolTaskExecutor Properties, CorePoolSize: 5, MaxPoolSize: 10, QueueCapacity: 10
+2022-05-05 10:14:55.770 [anythingMarketAPI-main] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 7bbbaf9f-108e-4ce1-9259-b941747e72a9
+
+2022-05-05 10:14:56.194 [anythingMarketAPI-main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will not secure any request
+2022-05-05 10:14:56.525 [anythingMarketAPI-main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+2022-05-05 10:14:56.569 [anythingMarketAPI-main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (http) with context path ''
+2022-05-05 10:14:56.586 [anythingMarketAPI-main] INFO  d.a.AnythingMarketMainServiceApplication - Started AnythingMarketMainServiceApplication in 8.565 seconds (JVM running for 9.509)
+2022-05-05 10:14:56.592 [anythingMarketAPI-main] ERROR d.a.AnythingMarketMainServiceApplication - 
+----------------------------------------------------------------------
+	Application 'AnythingMarketMainServiceApplication' is running!
+----------------------------------------------------------------------
+2022-05-05 10:15:15.496 [anythingMarketAPI-http-nio-8088-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-05 10:15:15.497 [anythingMarketAPI-http-nio-8088-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-05-05 10:15:15.498 [anythingMarketAPI-http-nio-8088-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-05-05 10:15:15.561 [anythingMarketAPI-http-nio-8088-exec-2] DEBUG d.a.market.controller.PurchaseController - test
+2022-05-05 10:15:27.629 [anythingMarketAPI-SpringApplicationShutdownHook] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-05 10:15:27.631 [anythingMarketAPI-SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-05-05 10:15:27.637 [anythingMarketAPI-SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-05-05 10:15:40.116 [anythingMarketAPI-main] INFO  d.a.AnythingMarketMainServiceApplication - Starting AnythingMarketMainServiceApplication using Java 11 on NB100608 with PID 5472 (D:\workspace\anything-market\back-end\anything-market-main-service\target\classes started by Tommy12.Lin in D:\workspace\anything-market\back-end\anything-market-main-service)
+2022-05-05 10:15:40.119 [anythingMarketAPI-main] INFO  d.a.AnythingMarketMainServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2022-05-05 10:15:41.180 [anythingMarketAPI-main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-05 10:15:41.282 [anythingMarketAPI-main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 84 ms. Found 1 JPA repository interfaces.
+2022-05-05 10:15:42.995 [anythingMarketAPI-main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http)
+2022-05-05 10:15:43.014 [anythingMarketAPI-main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+2022-05-05 10:15:43.015 [anythingMarketAPI-main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-05-05 10:15:43.015 [anythingMarketAPI-main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-05-05 10:15:43.230 [anythingMarketAPI-main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-05-05 10:15:43.230 [anythingMarketAPI-main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3047 ms
+2022-05-05 10:15:43.492 [anythingMarketAPI-main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-05 10:15:43.558 [anythingMarketAPI-main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-05-05 10:15:43.797 [anythingMarketAPI-main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-05 10:15:43.932 [anythingMarketAPI-main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-05-05 10:15:44.031 [anythingMarketAPI-main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-05-05 10:15:44.071 [anythingMarketAPI-main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+2022-05-05 10:15:44.809 [anythingMarketAPI-main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-05 10:15:44.818 [anythingMarketAPI-main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-05 10:15:44.887 [anythingMarketAPI-main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-05 10:15:45.361 [anythingMarketAPI-main] INFO  d.anythingmarketmainservice.config.ExecutorConfig - ThreadPoolTaskExecutor Properties, CorePoolSize: 5, MaxPoolSize: 10, QueueCapacity: 10
+2022-05-05 10:15:45.468 [anythingMarketAPI-main] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: a4f10f8a-2a43-4639-ae56-0d26df253a12
+
+2022-05-05 10:15:45.779 [anythingMarketAPI-main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will not secure any request
+2022-05-05 10:15:46.105 [anythingMarketAPI-main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+2022-05-05 10:15:46.233 [anythingMarketAPI-main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (http) with context path ''
+2022-05-05 10:15:46.249 [anythingMarketAPI-main] INFO  d.a.AnythingMarketMainServiceApplication - Started AnythingMarketMainServiceApplication in 6.851 seconds (JVM running for 7.622)
+2022-05-05 10:15:51.465 [anythingMarketAPI-http-nio-8088-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-05 10:15:51.466 [anythingMarketAPI-http-nio-8088-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-05-05 10:15:51.467 [anythingMarketAPI-http-nio-8088-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-05-05 10:15:51.512 [anythingMarketAPI-http-nio-8088-exec-1] DEBUG d.a.market.controller.PurchaseController - test
+2022-05-05 10:17:17.713 [anythingMarketAPI-http-nio-8088-exec-9] DEBUG d.a.market.controller.PurchaseController - test
+2022-05-05 10:24:01.060 [anythingMarketAPI-SpringApplicationShutdownHook] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-05 10:24:01.063 [anythingMarketAPI-SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-05-05 10:24:01.069 [anythingMarketAPI-SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

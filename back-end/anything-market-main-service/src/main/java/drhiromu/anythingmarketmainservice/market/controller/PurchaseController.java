@@ -3,12 +3,13 @@ package drhiromu.anythingmarketmainservice.market.controller;
 import drhiromu.anythingmarketmainservice.market.model.Item;
 import drhiromu.anythingmarketmainservice.market.payload.PurchaseAction;
 import drhiromu.anythingmarketmainservice.market.service.PurchaseService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Set;
 
+@Slf4j
 @RestController
 @RequestMapping("api/purchase")
 public class PurchaseController {
@@ -42,6 +43,7 @@ public class PurchaseController {
 
     @GetMapping("line-information")
     public List<String> getLineInformation(){
+        log.debug("test");
         return purchaseService.getLineInformation();
     }
 }

@@ -18,9 +18,8 @@
         <file>${LOG_HOME}/${LOG_FILE_NAME}.log</file>
 
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-            <!--日志文件輸出的文件名-->
             <FileNamePattern>${LOG_HOME}/archived/${LOG_FILE_NAME}.%d{yyyy-MM-dd}.%i.log.gz</FileNamePattern>
-            <!--日志文件保留天數-->
+
             <maxFileSize>100MB</maxFileSize>
             <maxHistory>180</maxHistory>
             <totalSizeCap>10GB</totalSizeCap>
@@ -48,5 +47,5 @@
     </root>
 
     <!-- 設定不同 class 的 Log 印出等級 -->
-    <logger name="com.albert.management" level="debug" />
+    <logger name="drhiromu.anythingmarketmainservice.market" level="DEBUG" />
 </configuration>
