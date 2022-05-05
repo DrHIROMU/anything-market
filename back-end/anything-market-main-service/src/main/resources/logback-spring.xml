@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="true">
+    <contextName>anythingMarketAPI</contextName>
+    <property name="LOG_HOME" value="./logs" />
+    <property name="LOG_FILE_NAME" value="anythingMarketAPI" />
+
+    <!-- 控制台輸出 -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoder默认配置为PartternLayoutEncoder    -->
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <charset>UTF-8</charset>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 按照每天生成日志文件 -->
+    <appender name="FILE"  class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_HOME}/${LOG_FILE_NAME}.log</file>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!--日志文件輸出的文件名-->
+            <FileNamePattern>${LOG_HOME}/archived/${LOG_FILE_NAME}.%d{yyyy-MM-dd}.%i.log.gz</FileNamePattern>
+            <!--日志文件保留天數-->
+            <maxFileSize>100MB</maxFileSize>
+            <maxHistory>180</maxHistory>
+            <totalSizeCap>10GB</totalSizeCap>
+        </rollingPolicy>
+
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%contextName-%t] %-5level %logger{50} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="ASYNC" class="ch.qos.logback.classic.AsyncAppender">
+        <!-- 修改 queue 的大小，這個執會影響非同步寫入時的效能 -->
+        <queueSize>512</queueSize>
+
+        <!-- 載入名字為 FILE 的 <appender> -->
+        <appender-ref ref="FILE" />
+    </appender>
+
+    <root level="${logging.level.root}">
+        <!-- 設定 ROOT 的 Log 等級，避免這個值改為 DEBUG，否則會印出許多啟動容器時不必要的資訊 -->
+        <level value="INFO" />
+
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="FILE"/>
+    </root>
+
+    <!-- 設定不同 class 的 Log 印出等級 -->
+    <logger name="com.albert.management" level="debug" />
+</configuration>
