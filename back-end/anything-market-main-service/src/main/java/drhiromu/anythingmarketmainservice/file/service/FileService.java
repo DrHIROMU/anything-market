@@ -8,8 +8,12 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.FileSystemUtils;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.MalformedURLException;
+import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -32,6 +36,18 @@ public class FileService {
             throw e;
         }
     }
+
+    public InputStream downloadFile(String fileId){
+        InputStream targetStream = null;
+        try{
+            String fileName = "test.txt";
+            Resource resource = load(fileName);
+            targetStream = resource.getInputStream();
+        }catch (Exception ex){
+            log.error("Error in downloadFile()", ex);
+        }
+        return targetStream;
+    }
     
     public void save(MultipartFile file) {
         String extension = FilenameUtils.getExtension(file.getOriginalFilename());
@@ -48,8 +64,11 @@ public class FileService {
                 init(filePath);
             }
             Files.copy(file.getInputStream(), this.filePath.resolve(file.getOriginalFilename()));
+        } catch (FileAlreadyExistsException fileAlreadyExistsException){
+            log.error("Error in saveFile()", fileAlreadyExistsException);
+            throw new RuntimeException("Error: file already exists.");
         } catch (Exception e) {
-            log.error("Error", e);
+            log.error("Error in saveFile()", e);
             throw new RuntimeException("Could not store the file. Error: " + e.getMessage());
         }
     }
