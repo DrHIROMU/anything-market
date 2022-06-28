@@ -1,10 +1,10 @@
-import http from "../http-common";
+import axios from "axios";
 
 class UploadFilesService {
   upload(file, onUploadProgress) {
     let formData = new FormData();
     formData.append("file", file);
-    return http.post("/upload", formData, {
+    return axios.post("/upload", formData, {
       headers: {
         "Content-Type": "multipart/form-data",
       },
@@ -13,8 +13,8 @@ class UploadFilesService {
   }
 
   getFiles() {
-    return http.get("/files");
+    return axios.get("/files");
   }
 }
 
-export default new UploadFilesService();
+export default UploadFilesService;
